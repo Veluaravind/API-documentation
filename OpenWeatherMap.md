@@ -14,7 +14,7 @@ Common use cases include web and mobile apps, smart devices, and dashboards for 
 
 ---
 
-## 🌍 Endpoint Description
+## 🌍 Endpoint description
 
 ### Get Current Weather Data
 
@@ -35,7 +35,7 @@ To access this API, an API key (`appid`) is **required** in every request.
 
 ---
 
-## 🧾 Request Parameters
+## 🧾 Request parameters
 
 ### Required
 
@@ -55,7 +55,7 @@ To access this API, an API key (`appid`) is **required** in every request.
 
 ---
 
-## 💻 Code Examples
+## 💻 Code examples
 
 ### Python (using `requests`)
 
@@ -80,7 +80,7 @@ curl "https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KE
 
 ---
 
-## 📥 Example Request
+## 📥 Example request
 
 ```http
 GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de57751874e8f1c1baa3575c1f
@@ -88,7 +88,7 @@ GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de577518
 
 ---
 
-## 📤 Example Response (truncated)
+## 📤 Example response (truncated)
 
 ```json
 {
@@ -109,7 +109,7 @@ GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de577518
 
 ---
 
-## 🧾 Response Fields
+## 🧾 Response fields
 
 | Field      | Type    | Description                             |
 |------------|---------|-----------------------------------------|
@@ -124,9 +124,9 @@ GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de577518
 
 ---
 
-## ❌ Error Handling
+## ❌ Error handling
 
-| Code | Meaning           | Description                                 |
+| Status code | Meaning           | Description                                 |
 |------|-------------------|---------------------------------------------|
 | 200  | OK                | Successful API call.                        |
 | 401  | Unauthorized      | Invalid or missing API key.                 |
@@ -145,9 +145,9 @@ GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de577518
 
 ---
 
-## 💡 FAQs and Best Practices
+## 💡 FAQs and best practices
 
-### Frequently Asked Questions
+### Frequently asked questions
 
 - **Q: How do I get temperatures in Fahrenheit?**  
   A: Add `units=imperial` to your request.
@@ -155,7 +155,7 @@ GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de577518
 - **Q: Can I get weather data using coordinates?**  
   A: Yes, use `lat` and `lon` instead of `q`.
 
-### Best Practices
+### Best practices
 
 - **Cache responses** where possible to reduce API calls.
 - **Monitor rate limits** to avoid disruptions (especially if using the free tier).
