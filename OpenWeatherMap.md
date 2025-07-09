@@ -41,7 +41,7 @@ To access this API, an API key (`appid`) is **required** in every request.
 
 | Parameter | Type   | Description |
 |-----------|--------|-------------|
-| `q`       | string | City name. Optionally include the country code (e.g., `q=London,GB`). |
+| `q`       | string | City name. Optionally include the country code (for example, `q=London,GB`). |
 | `appid`   | string | Your unique API key. |
 
 ### Optional
@@ -49,15 +49,9 @@ To access this API, an API key (`appid`) is **required** in every request.
 | Parameter | Type   | Description |
 |-----------|--------|-------------|
 | `units`   | string | Units of measurement: `standard` (Kelvin, default), `metric` (Celsius), or `imperial` (Fahrenheit). |
-| `lang`    | string | Response language (e.g., `en`, `es`, `fr`, etc.). |
+| `lang`    | string | Response language (for example, `en`, `es`, `fr`, and others). |
 | `lat`     | float  | Latitude coordinate (alternative to `q`). |
 | `lon`     | float  | Longitude coordinate (alternative to `q`). |
-
----
-
-## 🧾 Header
-
-No custom headers are required. Standard HTTPS GET requests using query parameters are sufficient.
 
 ---
 
@@ -89,7 +83,7 @@ curl "https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KE
 ## 📥 Example Request
 
 ```http
-GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de57751874e8f1c1baa3575c1f6
+GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de57751874e8f1c1baa3575c1f
 ```
 
 ---
@@ -119,14 +113,14 @@ GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de577518
 
 | Field      | Type    | Description                             |
 |------------|---------|-----------------------------------------|
-| `coord`    | object  | Geographic coordinates (lat, lon).      |
+| `coord`    | object  | Geographic coordinates (lattitude, longitutde).|
 | `weather`  | array   | Weather condition summary.              |
-| `main`     | object  | Temperature, pressure, and humidity.    |
+| `main`     | object  | Temperature, pressure, and humidity details.|
 | `wind`     | object  | Wind speed and direction.               |
 | `clouds`   | object  | Cloudiness percentage.                  |
 | `sys`      | object  | Country, sunrise, and sunset times.     |
 | `name`     | string  | City name.                              |
-| `cod`      | integer | Response status code (e.g., 200 = OK).  |
+| `cod`      | integer | Response status code (for example, 200 = OK).  |
 
 ---
 
