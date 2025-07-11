@@ -59,7 +59,8 @@ To access this API, an API key (`appid`) is **required** in every request.
 
 ### JavaScript (using `requests`)
 
-```const url = "https://api.openweathermap.org/data/2.5/weather";
+```
+const url = "https://api.openweathermap.org/data/2.5/weather";
 const params = new URLSearchParams({
   q: "London",
   appid: "YOUR_API_KEY",
