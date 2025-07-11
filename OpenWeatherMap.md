@@ -16,7 +16,7 @@ Common use cases include web and mobile apps, smart devices, and dashboards for 
 
 ## 🌍 Endpoint description
 
-### Get Current Weather Data
+### Get current weather data
 
 - **URL**: `https://api.openweathermap.org/data/2.5/weather`
 - **Method**: `GET`
@@ -35,7 +35,7 @@ To access this API, an API key (`appid`) is **required** in every request.
 
 ---
 
-## 🧾 Request parameters
+## 🧾 Query parameters
 
 ### Required
 
@@ -120,16 +120,17 @@ GET https://api.openweathermap.org/data/2.5/weather?q=London&appid={YOUR_API_KEY
 | `clouds`   | object  | Cloudiness percentage.                  |
 | `sys`      | object  | Country, sunrise, and sunset times.     |
 | `name`     | string  | City name.                              |
-| `cod`      | integer | Response status code (for example, 200 = OK).  |
+| `cod`      | integer | Response status code (for example, 200 = OK).|
 
 ---
 
 ## ❌ Error handling
 
-| Status code | Meaning           | Description                                 |
+| Status code | Meaning           | Description                          |
 |------|-------------------|---------------------------------------------|
 | 200  | OK                | Successful API call.                        |
-| 401  | Unauthorized      | Invalid or missing API key.                 |
+| 401  | Unauthenticated  | Invalid or missing API key.                 |
+| 403  | Forbidden   | The API key lacks permission for the requested resource. 
 | 404  | Not Found         | City not found or invalid request.          |
 | 429  | Too Many Requests | API rate limit exceeded.                    |
 | 500  | Internal Error    | Server-side error.                          |
