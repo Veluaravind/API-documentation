@@ -57,19 +57,28 @@ To access this API, an API key (`appid`) is **required** in every request.
 
 ## 💻 Code examples
 
-### Python (using `requests`)
+### JavaScript (using `requests`)
 
-```python
-import requests
+```const url = "https://api.openweathermap.org/data/2.5/weather";
+const params = new URLSearchParams({
+  q: "London",
+  appid: "YOUR_API_KEY",
+  units: "metric"
+});
 
-url = "https://api.openweathermap.org/data/2.5/weather"
-params = {
-    "q": "London",
-    "appid": "YOUR_API_KEY",
-    "units": "metric"
-}
-response = requests.get(url, params=params)
-print(response.json())
+fetch(`${url}?${params}`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error("Error fetching weather data:", error);
+  });
 ```
 
 ### Curl
