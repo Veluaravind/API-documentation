@@ -83,7 +83,7 @@ curl "https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KE
 ## 📥 Example request
 
 ```http
-GET https://api.openweathermap.org/data/2.5/weather?q=London&appid=8aaa7de57751874e8f1c1baa3575c1f
+GET https://api.openweathermap.org/data/2.5/weather?q=London&appid={YOUR_API_KEY}
 ```
 
 ---
