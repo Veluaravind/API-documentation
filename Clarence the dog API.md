@@ -25,6 +25,7 @@ When you're setting things up, please use one authentication method only—eithe
     Pleo recommends OAuth2.0 for applications that require secure, user-based access — especially when interacting across multiple Pleo services.
 
     You will need to:
+	
       a. Register your app via Pleo’s Developer Portal.
       b. Obtain an OAuth2 access token using client credentials or authorization code flow.
       c. Send the token in the Authorization header with each request.
@@ -37,6 +38,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
     For lightweight use cases, when integrating Pleo with apps that don't support OAuth (like on-premise apps). This method works for custom integrations or temporary data pulls.
  
     You will need to:
+	
       a. Generate an API key via your developer dashboard.
       b. Include it in the x-api-key header of every request.
 
@@ -62,7 +64,7 @@ For more details, see [Authentication and Authorisation](https://developers.pleo
 
 **POST** /v3/clarence/sit
 
-Ask Clarence to sit. optionally with a set duration, repetition count, and reward. // Alternative "Ready to have Clarence sit? Just use this endpoint!"
+Ask Clarence to sit, optionally with a set duration, repetition count, and reward. // Alternative "Ready to have Clarence sit? Just use this endpoint!"
 
 **Example request**
 
@@ -214,8 +216,8 @@ Ask Clarence to walk nicely by your side.
 - Method: POST
 - URL: https://external.pleo.io/v3/clarence/heel
 - Headers:
- - Authorization: Bearer YOUR_ACCESS_TOKEN
- - Content-Type: application/json
+  - Authorization: Bearer YOUR_ACCESS_TOKEN
+  - Content-Type: application/json
 
 **Example request with toy**
 
@@ -285,24 +287,29 @@ Note: Please don't mistake Clarence, he isn’t ignoring you – he’s just rec
 ## FAQs
 
 Q: Can I skip reward?
-A: Not in this version — every action includes a reward.
+
+    A: Not in this version — every action includes a reward.
 
 Q: What happens if a treat is out of stock?
-A: You’ll get a 409 Conflict with a hint listing the unavailable items.
+
+    A: You’ll get a 409 Conflict with a hint listing the unavailable items.
 
 Q: Is duration exact?
-A: No, it’s a target. The response shows both requested and actual times.
+
+    A: No, it’s a target. The response shows both requested and actual times.
 
 Q: Can I set Clarence’s breed?
-A: Yes — you can set it when you create Clarence’s profile. For example: "breed": "Patterdale Terrier".
+
+    A: Yes — you can set it when you create Clarence’s profile. For example: "breed": "Patterdale Terrier".
 
 Q: Should I set the water level if Clarence wants to drink?
-A: Yes — Clarence enjoys one glass of water a day. You can specify the amount to keep his bowl topped up.
+
+    A: Yes — Clarence enjoys one glass of water a day. You can specify the amount to keep his bowl topped up.
 
 ## Notes
 
-- For future proof `rewardType`, and `rewardDetails` are not always present.
-- color in toy rewards is optional — if omitted, backend assigns a default.
+- For future proof, `rewardType`, and `rewardDetails` are not always present.
+- Color in toy rewards is optional — if omitted, backend assigns a default.
 
 ## Best practices
 
