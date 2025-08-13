@@ -28,7 +28,7 @@ When you're setting things up, please use one authentication method only—eithe
 	
       a. Register your app via XYZ’s Developer Portal.
    
-      b. Obtain an OAuth2 access token using client credentials.
+      b. Obtain an OAuth2 access token using client credentials or authorization code flow.
    
       c. Include the token in the Authorization header for every request.
  
