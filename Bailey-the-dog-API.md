@@ -2,7 +2,7 @@
 
 ## Overview
 
-Say hello to Bailey the Dog – My favorite furry companion and now your programmable pup via API. With the Bailey Services API, you can interact with Bailey just like we do at <<XYZ>>:
+Say hello to Bailey the Dog – My favorite furry companion and now your programmable pup via API. With the Bailey Services API, you can interact with Bailey just like we do at XYZ:
 - Ask him to sit
 - Offer his paw
 - Heel at your command
@@ -47,8 +47,6 @@ Authorization: Bearer YOUR_ACCESS_TOKEN
 
 **Example:**
 x-api-key: YOUR_API_KEY
-
-For more details, see [Authentication and Authorisation](https://developers.xyz.io/docs/authentication-authorisation-introduction).
 
 ## Endpoints
 
@@ -315,6 +313,7 @@ Q: Should I set the water level if Bailey wants to drink?
 ## Best practices
 
 - Do not expose your API key (if you are using one) in frontend code or public repositories.
+- Ensure that you specify correct password for authentication.
 - Cache responses where possible to reduce API calls.
 - Monitor rate limits to avoid disruptions.
 - Use HTTPS to ensure secure communication.
